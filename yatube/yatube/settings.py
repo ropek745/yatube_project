@@ -52,6 +52,8 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'yatube.urls'
 
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 TEMPLATES = [
     {
