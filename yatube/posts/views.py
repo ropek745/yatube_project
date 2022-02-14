@@ -5,7 +5,13 @@ from django.http import HttpResponse
 # Главная страница
 def index(request):
     template = 'posts/index.html'
-    return render (request, template)
+    title = 'Проект "Yatube"'
+    text = 'Это главная страница проекта Yatube'
+    context = {
+        'title': title,
+        'text': text,
+    }
+    return render (request, template, context)
     
 
 # Страница со списком групп
@@ -14,4 +20,11 @@ def group_posts(request, slug):
 
 
 def group_posts_list(request):
-    return HttpResponse('Тут будет список групп')
+    template = 'posts/group_list.html'
+    title = 'Проект "Yatube"'
+    text = 'Здесь будет информация о группах проекта Yatube'
+    context = {
+        'title': title,
+        'text': text,
+    }
+    return render (request, template, context)

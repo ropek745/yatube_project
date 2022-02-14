@@ -1,5 +1,5 @@
-<!-- templates/posts/index.html --> 
-{% extends 'base.html' %} 
+<!-- templates/posts/group_list.html-->
+{% extends 'base.html' %}
 
 <!DOCTYPE html> <!-- Используется html 5 версии -->
 <html lang="ru"> <!-- Язык сайта - русский -->
@@ -24,9 +24,9 @@
   </head>
   <body>
     <header>
-      {% include 'includes/header.html' %}
+      {% include 'includes/footer.html' %}      
     </header>
-    <main> 
+    <main>
       {% block content %}
       {{ text }}
       {% endblock %}
@@ -37,6 +37,6 @@
     <!-- py-3: контент внутри размещается с отступом сверху и снизу -->         
     <footer class="border-top text-center py-3">
       <!-- тег span используется для добавления нужных стилей отдельным участкам текста --> 
-      {% include 'includes/footer.html' %} 
+      {% include 'includes/footer.html' %}  
     </footer>
   </body>
