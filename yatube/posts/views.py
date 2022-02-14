@@ -1,4 +1,3 @@
-from http.client import HTTPResponse
 from django.shortcuts import render
 from django.http import HttpResponse
 
@@ -9,9 +8,9 @@ def index(request):
     
 
 # Страница со списком групп
-def groups_posts(request, slug):
+def group_posts(request, slug):
     return HttpResponse(f'Информация о {slug}')
 
 
-def groups_posts_list(request):
-    return HTTPResponse('Список групп')
+def group_posts_list(request):
+    return HttpResponse('Тут будет список групп')
