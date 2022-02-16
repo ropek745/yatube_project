@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 # Импортируем модель, чтобы обратиться к ней
-from .models import Post
+from .models import Post, Group
 
 def index(request):
     # Одна строка вместо тысячи слов на SQL:

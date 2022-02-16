@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Post
+from .models import Post, Group
 
 class PostAdmin(admin.ModelAdmin):
     # Перечисляем поля, которые должны отображаться в админке
@@ -13,4 +13,5 @@ class PostAdmin(admin.ModelAdmin):
 
 # При регистрации модели Post источником конфигурации для неё назначаем
 # класс PostAdmin
-admin.site.register(Post, PostAdmin)  
+admin.site.register(Post, PostAdmin)
+admin.site.register(Group)
